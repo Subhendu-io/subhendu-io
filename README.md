@@ -25,7 +25,7 @@ const subhendu = {
     technologies: {
         mobileApp: ["iOS app", "Android app", "Flutter", "ReactNative", "NativeScript"],
         frontEnd: {
-            js: ["Angular", "React ", "Vue"],
+            js: [ "React ", "Angular", "Vue"],
             css: ["angular-material", "materialize", "bootstrap"]
         },
         backEnd: {
