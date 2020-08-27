@@ -12,7 +12,7 @@
 💻 Hit in your console or terminal to connect with me.
 
 ```bash
-npx subhendu
+npx subhendu.io
 ```
 
 ## A little more about me... <img src="https://88daystowork.com/img/walker-loading.gif" width="50" style="margin-bottom:-8px;">  
