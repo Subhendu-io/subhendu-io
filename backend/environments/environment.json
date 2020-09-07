@@ -21,7 +21,7 @@
         "SENDGRID_API_KEY"    : "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"
     },
     "production": {
-        "BASE_URL"         : "https://subhendu.io",
+        "BASE_URL"         : "https://subhendudev.herokuapp.com",
         
         "DB_HOST"          : "subhendu.n7ord.mongodb.net",
         "DB_PORT"          : "",

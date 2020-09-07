@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
 
-  API           : 'https://subhendu.io/api/v1',
+  API           : 'https://subhendudev.herokuapp.com/api/v1',
   APP_LOGO      : 'assets/images/logo.png',
   APP_LOGO_MINI : 'assets/images/logo-mini.png',
   COMPANY_NAME  : 'Subhendu.io',
