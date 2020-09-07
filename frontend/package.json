@@ -15,7 +15,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "npm run build-prod",
+    "build-prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint"
   },
