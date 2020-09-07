@@ -1,0 +1,50 @@
+$app-light: white;
+$app-dark: #263238;
+
+$app-dark-primary: rgb(98, 0, 234);
+$app-dark-accent: rgb(48, 79, 254);
+$app-dark-warn: rgb(255, 64, 129);
+$app-dark-primary-bg: linear-gradient(132deg, rgb(98, 0, 234) 0%, rgb(170, 0, 255) 80%);
+$app-dark-accent-bg: linear-gradient(132deg, rgb(48, 79, 254) 0%, rgb(79, 195, 247) 80%);
+$app-dark-warn-bg: linear-gradient(132deg, rgb(255, 64, 129) 0%, rgb(255, 183, 77) 80%);
+
+$app-light-primary: rgb(170, 0, 255);
+$app-light-accent: rgb(79, 195, 247);
+$app-light-warn: rgb(255, 183, 77);
+$app-light-primary-bg: linear-gradient(132deg, rgb(170, 0, 255) 0%, rgb(98, 0, 234) 80%);
+$app-light-accent-bg: linear-gradient(132deg, rgb(79, 195, 247) 0%, rgb(48, 79, 254) 80%);
+$app-light-warn-bg: linear-gradient(132deg, rgb(255, 183, 77) 0%, rgb(255, 64, 129) 80%);
+
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$blue: #0073dd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$app_dark: #11111f;
+$app_light: #fbfbff;
+$app_primary: #304ffe;
+$app_secondary: #e67014;
+$app_success: #1bc142;
+$app_info: #9be2ff;
+$app_warn: #ffb307;
+$app_danger: #d9261c;
+$app_royal: #7051bb;
+$app_lightsky: #dddde8;

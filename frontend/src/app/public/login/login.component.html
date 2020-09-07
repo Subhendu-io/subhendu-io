@@ -1,0 +1,49 @@
+<main class="app-main app-login">
+    <section class="app-bg-top h-100">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-md-8">
+                    <div class="app-card app-card-login app-card-solid app-shadow app-rounded-10">
+                        <div fxLayout="row">
+                            <div fxFlex class="app-login-bg p-4">
+                                <img width="80px" src="{{ appLogo }}" alt="">
+                            </div>
+                            <div fxFlex class="app-form-wrapper">
+                                <form class="app-form" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+                                    <h4 class="app-form-title mb-3">Please Login!</h4>
+                                    <mat-form-field appearance="outline" class="full-width-field">
+                                        <mat-label>Email</mat-label>
+                                        <input matInput formControlName="email" type="email" placeholder="example@email.com">
+                                        <mat-icon matSuffix>email</mat-icon>
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline" class="full-width-field">
+                                        <mat-label>Password</mat-label>
+                                        <input matInput formControlName="password" type="password" placeholder="Password">
+                                        <mat-icon matSuffix>fingerprint</mat-icon>
+                                    </mat-form-field>
+                                    <div class="app-checkbox mb-1">
+                                        <mat-checkbox color="primary" formControlName="remember_me">Remember me</mat-checkbox>
+                                    </div>
+                                    <button mat-raised-button [disabled]="loginForm.invalid" type="submit" class="app-bg-primary app-submit w-100">
+                                        LOGIN
+                                    </button>
+                                    <div class="app-divider text-center">
+                                        <small>Or connect with social medias</small>
+                                    </div>
+                                    <button mat-raised-button type="button" class="app-google w-100 mb-3">
+                                        <img width="17" src="assets/images/icons/google.png" alt="G">
+                                        <span>&nbsp; Login with Google</span>
+                                    </button>
+                                    <button mat-raised-button type="button" class="app-facebook w-100">
+                                        <i class="fa fa-1x fa-facebook-f"></i>
+                                        <span>&nbsp; Login with Facebook</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

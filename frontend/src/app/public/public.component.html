@@ -1,0 +1,160 @@
+<header class="header">
+    <nav id="app_navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" [routerLink]="['/home']">
+                <img src="{{ appLogo }}" alt="" width="110">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <button mat-flat-button [routerLink]="['/home']">
+                            <mat-icon>home</mat-icon> 
+                            Home
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button mat-flat-button (click)="changeTheme()">
+                            <ng-container *ngIf="activeTheme === 'light-theme'; else darkTheme">
+                                <mat-icon>nights_stay</mat-icon> Dark Mood
+                            </ng-container>
+                            <ng-template #darkTheme>
+                                <mat-icon>wb_sunny</mat-icon> &nbsp;Light Mood
+                            </ng-template>
+                        </button>
+                    </li>
+                    <ng-container *ngIf="currentUser; else noUser">
+                        <li class="nav-item">
+                            <button mat-button [matMenuTriggerFor]="menu">
+                                <mat-icon>person</mat-icon>
+                                {{ currentUser?.username }}
+                            </button>
+                            <mat-menu #menu="matMenu">
+                                <button mat-menu-item [routerLink]="['app/dashboard']">
+                                    <mat-icon>dashboard</mat-icon>
+                                    Dashboard
+                                </button>
+                                <button mat-menu-item [routerLink]="['app/profile']">
+                                    <mat-icon>person</mat-icon>
+                                    Profile
+                                </button>
+                                <button mat-menu-item (click)="onLogout()">
+                                    <mat-icon>logout</mat-icon>
+                                    Logout
+                                </button>
+                            </mat-menu>
+                        </li>
+                    </ng-container>
+                    <ng-template #noUser>
+                        <li class="nav-item">
+                            <button mat-flat-button [routerLink]="['/auth/login']">
+                                <mat-icon>login</mat-icon> 
+                                Login
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button mat-flat-button [routerLink]="['/auth/register']">
+                                <mat-icon>how_to_reg</mat-icon> 
+                                Register
+                            </button>
+                        </li>
+                    </ng-template>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<router-outlet></router-outlet>
+<footer class="with-pattern-1 position-relative pt-5">
+    <div class="container section-padding-y">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img class="mb-4" src="{{ appLogo }}" [routerLink]="['/home']" width="110">
+                <p class="text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+            </div>
+            <div class="col-lg-2 mb-4 mb-lg-0">
+                <h2 class="h5 mb-4">Quick Links</h2>
+                <div class="d-flex">
+                    <ul class="list-unstyled d-inline-block mr-4 mb-0">
+                        <li class="mb-2">
+                            <a class="footer-link" href="#">History </a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link" href="#">About us</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link" href="#">Contact us</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link" href="#">Services</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 mb-4 mb-lg-0">
+                <h2 class="h5 mb-4">Services</h2>
+                <div class="d-flex">
+                    <ul class="list-unstyled mr-4 mb-0">
+                        <li class="mb-2"><a class="footer-link" href="#">History </a></li>
+                        <li class="mb-2"><a class="footer-link" href="#">About us</a></li>
+                        <li class="mb-2"><a class="footer-link" href="#">Contact us</a></li>
+                        <li class="mb-2"><a class="footer-link" href="#">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="h5 mb-4">Contact Info</h2>
+                <ul class="list-unstyled mr-4 mb-3">
+                    <li class="mb-2 text-muted">728 Ocello Street, San Diego, California. </li>
+                    <li class="mb-2">
+                        <a class="footer-link" href="tel:123-456-7890">
+                            123-456-7890
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="footer-link" href="mailto:support@example.com">
+                            support@example.com
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <a class="social-link" href="#">
+                            <i class="fa fa-2x fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link" href="#">
+                            <i class="fa fa-2x fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link" href="#">
+                            <i class="fa fa-2x fa-google-plus"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link" href="#">
+                            <i class="fa fa-2x fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copyrights">
+        <div class="container text-center py-4">
+            <p class="mb-0 text-muted text-sm">
+                &copy; 2020, Customer Portal. Design by 
+                <a href="https://Subhendu.io" class="text-reset">
+                    Subhendu.io
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>

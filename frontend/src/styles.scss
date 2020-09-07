@@ -1,0 +1,165 @@
+@import '~ngx-toastr/toastr';
+@import './assets/scss/themes';
+@import './assets/scss/material';
+@import './assets/scss/variables';
+
+.light-theme {
+    color: $app-dark;
+    background: $app-light;
+    .app-navbar-bg{
+        background: $app-light;
+    }
+    .app-bg-primary{
+        color: $app-light;
+        background-image: $app-light-primary-bg;
+    }
+    .app-bg-accent{
+        color: $app-light;
+        background-image: $app-light-accent-bg;
+    }
+    .app-bg-warn{
+        color: $app-light;
+        background-image: $app-light-warn-bg;
+    }
+    .app-sidebar{
+        background: $app-light;
+    }
+    .app-main{
+        .app-bg-top{
+            background: url('assets/images/banner-4.png') no-repeat;
+            background-size: 100% 80%
+        }
+        .app-bg-center{
+            background: url('assets/images/service-bg.png') no-repeat;
+            background-size: cover;
+        }
+        .app-bg-bottom{
+            background: url('assets/images/testimonials-bg.png') no-repeat;
+            background-size: 40% 100%;
+            background-position: left center;
+        }
+        &.app-panel-main{
+            background: url('assets/images/service-bg.png') no-repeat;
+            background-size: cover;
+        }
+    }
+    .app-card-solid{
+        background-color: $app-light;
+    }
+}
+.dark-theme {
+    color: $app-light;
+    background-color: $app-dark;
+    .app-navbar-bg{
+        background: $app-dark;
+    }
+    .app-bg-primary{
+        color: $app-light;
+        background-image: $app-dark-primary-bg;
+    }
+    .app-bg-accent{
+        color: $app-light;
+        background-image: $app-dark-accent-bg;
+    }
+    .app-bg-warn{
+        color: $app-light;
+        background-image: $app-dark-warn-bg;
+    }
+    .app-sidebar{
+        background-color: $app-dark;
+    }
+    .app-main{
+        .app-bg-top{
+            background: url('assets/images/banner-4.dark.png') no-repeat;
+            background-size: 100% 80%
+        }
+        .app-bg-center{
+            background: url('assets/images/service-bg.dark.png') no-repeat;
+            background-size: cover;
+        }
+        .app-bg-bottom{
+            background: url('assets/images/testimonials-bg.dark.png') no-repeat;
+            background-size: 40% 100%;
+            background-position: left center;
+        }
+        &.app-panel-main{
+            background: url('assets/images/service-bg.dark.png') no-repeat;
+            background-size: cover;
+        }
+    }
+    .app-card-solid{
+        background-color: $app-dark;
+    }
+}
+
+* {
+    outline: 0 !important;
+}
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.app-comp-header{
+    padding: 20px 0px 10px 0px;
+}
+.app-card{
+    border: 0;
+    .card-body{
+        .card-title{
+            margin: 20px 0px;
+        }
+    }
+}
+.app-shadow{
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.10), 0 7px 10px -5px rgba(0, 0, 0, 0.40);
+}
+.app-rounded{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.app-rounded-10{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.app-rounded-20{
+    border-radius: 20px;
+    overflow: hidden;
+}
+.full-width-field {
+    width: 100%;
+}
+
+// ngx toastr css
+.toast-container {
+    .ngx-toastr {
+        width: auto !important;
+        max-width: 300px !important;
+        transition: all ease 0.5s;
+        background-size: 20px;
+        padding: 8px 20px 8px 50px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        .toast-title {
+            font-size: 0.9rem;
+        }
+        .toast-message {
+            font-size: 0.9rem;
+        }
+    }
+    .ngx-toastr:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    .toast-error {
+        background-color: #ca1c4c;
+        box-shadow: 0 0 15px rgba(150, 0, 32, 0.5);
+    }
+    .toast-success {
+        background-color: #6200ea;
+        box-shadow: 0 0 15px rgb(98, 0, 234, 0.5);
+    }
+    .toast-warning {
+        background-color: #e78932;
+        box-shadow: 0 0 15px rgba(150, 100, 0, 0.5);
+    }
+}

@@ -1,0 +1,23 @@
+<mat-toolbar>Angular Material</mat-toolbar>
+<mat-toolbar color="primary">Angular Material</mat-toolbar>
+<mat-toolbar color="accent">Angular Material</mat-toolbar>
+<mat-toolbar color="warn">Angular Material</mat-toolbar>
+<div fxLayout="row">
+    <div fxFlex class="app-card app-bg-primary">
+        <div class="m-5 p-5">q</div>
+    </div>
+    <div fxFlex class="app-card app-bg-accent">
+        <div class="m-5 p-5">q</div>
+    </div>
+    <div fxFlex class="app-card app-bg-warn">
+        <div class="m-5 p-5">q</div>
+    </div>
+</div>
+<section *ngIf="appData">
+    <div class="container">
+        <div class="jambotron m-5 p-5">
+            <h1 class="display-4">{{ appData.data }}</h1>
+            <p class="lead">{{ appData.message }}</p>
+        </div>
+    </div>
+</section>

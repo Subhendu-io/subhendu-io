@@ -1,0 +1,66 @@
+<main fxLayout="row">
+    <div fxLayout="column" [ngClass]="{'app-compact-sidebar': compactSidebar}" class="app-sidebar app-shadow">
+        <div fxFlex fxLayout="column" fxLayoutAlign="start start">
+            <a mat-button class="px-2 py-2 w-100" [routerLink]="['/home']">
+                <img height="25" src="assets/images/logo.png" alt="">
+            </a>
+            <button mat-button [routerLink]="['/app/dashboard']" routerLinkActive="active">
+                <mat-icon>pie_chart</mat-icon>
+                <span>Dashboards</span>
+            </button>
+            <button mat-button [routerLink]="['/app/admin/users']" routerLinkActive="active">
+                <mat-icon>group</mat-icon>
+                <span>Users</span>
+            </button>
+        </div>
+        <div class="app-settings">
+            <button mat-button [matMenuTriggerFor]="settingsMenu">
+                <mat-icon>settings</mat-icon>
+                <span>Settings</span>
+            </button>
+            <mat-menu #settingsMenu="matMenu">
+                <button class="w-100 text-left py-2" mat-button (click)="onSidebarChange()">
+                    <ng-container *ngIf="compactSidebar; else collapsedSidebar">
+                        <mat-icon>menu</mat-icon> Compact Sidebar
+                    </ng-container>
+                    <ng-template #collapsedSidebar>
+                        <mat-icon>menu_open</mat-icon> Collapsed Sidebar
+                    </ng-template>
+                </button>
+                <button class="w-100 text-left py-2" mat-button (click)="onThemeChange()">
+                    <ng-container *ngIf="activeTheme === 'light-theme'; else darkTheme">
+                        <mat-icon>nights_stay</mat-icon> Dark Mood
+                    </ng-container>
+                    <ng-template #darkTheme>
+                        <mat-icon>wb_sunny</mat-icon> Light Mood
+                    </ng-template>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+
+    <div fxFlex [ngClass]="{'app-sidebar-gap': compactSidebar}" class="app-main app-panel-main">
+        <header class="app-navbar py-2" fxLayout="row">
+            <div class="app-brdr-r pt-2 pr-3 text-right" fxFlex>
+                Welcome <b class="text-primary">{{ currentUser.username }}</b>
+            </div>
+            <button class="app-header-btn" mat-icon-button>
+                <mat-icon>notifications_none</mat-icon>
+            </button>
+            <button class="app-header-btn" mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>person</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item [routerLink]="['/app/profile']">
+                    <mat-icon>person</mat-icon>
+                    Profile
+                </button>
+                <button mat-menu-item (click)="onLogout()">
+                    <mat-icon>exit_to_app</mat-icon>
+                    Logout
+                </button>
+            </mat-menu>
+        </header>
+        <router-outlet></router-outlet>
+    </div>
+</main>

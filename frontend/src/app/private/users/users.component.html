@@ -1,0 +1,64 @@
+<section fxLayout="row" class="app-section app-comp-header">
+    <div fxFlex>
+        <h5 class="app-title">Dashboards</h5>
+    </div>
+    <div fxLayout="row">
+        <div class="ml-3">
+            <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search Dashboard">
+        </div>
+        <div class="ml-3">
+            <button mat-mini-fab color="primary" matTooltip="Create a new dashboard" (click)="addDashboard()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="app-section app-comp-body">
+    <div class="app-toolbox">
+        <div class="app-card app-shadow app-rounded-10">
+            <div fxLayout="row">
+                <div class="app-toolbox-menu app-bg-primary" fxFlex="20">
+                    <mat-list class="app-toolbox-menu-list">
+                        <h3 mat-subheader>LAYOUT</h3>
+                        <mat-list-item class="active">
+                            <mat-icon mat-list-icon>view_list</mat-icon>
+                            <h4 mat-line>List View</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>view_module</mat-icon>
+                            <h4 mat-line>Grid View</h4>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                        <h3 mat-subheader>GENARAL</h3>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>add_circle_outline</mat-icon>
+                            <h4 mat-line>Active</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>highlight_off</mat-icon>
+                            <h4 mat-line>Completed</h4>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+                        <h3 mat-subheader>ADVANCED</h3>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>date_range</mat-icon>
+                            <h4 mat-line>Due Date</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>create</mat-icon>
+                            <h4 mat-line>Assigned By</h4>
+                        </mat-list-item>
+                        <mat-list-item>
+                            <mat-icon mat-list-icon>create</mat-icon>
+                            <h4 mat-line>Assigned To</h4>
+                        </mat-list-item>
+                    </mat-list>
+                </div>
+                <div fxFlex fxLayout="column" class="app-toolbox-body p-4">
+                    <h5>Manage Users</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

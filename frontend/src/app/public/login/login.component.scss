@@ -1,0 +1,31 @@
+.app-main{
+    height: 100%;
+    .app-login-bg{
+        background-image: url('/assets/images/bbg-1.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+    }
+    .app-form-wrapper{
+        .app-form{
+            padding: 40px 30px;
+            .app-form-title{
+                font-weight: 100;
+            }
+            .app-divider{
+                margin: 15px auto;
+            }
+            .app-google{
+                color: black;
+                background-color: white;
+            }
+            .app-facebook{
+                color: white;
+                background-color: #3b5998;
+                i{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

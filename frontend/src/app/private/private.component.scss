@@ -1,0 +1,47 @@
+header {
+    width: 100%;
+}
+main {
+    .app-sidebar {
+        width: 70px;
+        height: 100vh;
+        position: sticky;
+        top: 0 !important;
+        overflow: hidden;
+        transition: all .1s ease-out;
+        z-index: 50;
+        &:hover{
+            width: 200px;
+            button {
+                width: 200px;
+            }
+        }
+        button {
+            width: 70px;
+            padding: 15px 0;
+            margin: 0;
+            text-align: left;
+            line-height: 24px;
+            background: transparent !important;
+            border-radius: 0;
+            &.active, &:hover {
+                color: rgb(48, 79, 254);
+                border-right: 3px solid rgb(48, 79, 254);
+            }
+            .mat-icon {
+                margin: 0px 23px;
+                padding: 0;
+            }
+        }
+    }
+    .app-compact-sidebar{
+        position: fixed;
+    }
+    .app-main {
+        padding: 0 30px;
+        min-height: 100%;
+    }
+    .app-sidebar-gap{
+        margin-left: 70px;
+    }
+}

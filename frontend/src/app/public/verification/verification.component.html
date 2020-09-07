@@ -1,0 +1,30 @@
+<main class="app-main app-verification">
+    <section class="app-bg-top h-100">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-md-10">
+                    <div class="app-card app-card-verification app-shadow app-rounded-10" *ngIf="showCodeForm">
+                        <div fxLayout="row">
+                            <div fxFlex class="app-verification-bg p-4">
+                                <img width="80px" src="assets/images/logo.png" alt="">
+                            </div>
+                            <div fxFlex class="app-form-wrapper">
+                                <form class="app-form" [formGroup]="verificationForm" (ngSubmit)="onVerify(verificationForm.value)">
+                                    <h4 class="app-form-title mb-3">Verify Now!</h4>
+                                    <mat-form-field appearance="outline" class="full-width-field">
+                                        <mat-label>Code</mat-label>
+                                        <input matInput formControlName="code" type="text" placeholder="1234">
+                                        <mat-icon matSuffix>code</mat-icon>
+                                    </mat-form-field>
+                                    <button mat-raised-button type="submit" [disabled]="verificationForm.invalid" class="app-bg-primary app-submit w-100">
+                                        VERIFY
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

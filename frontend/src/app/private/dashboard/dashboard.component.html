@@ -1,0 +1,19 @@
+<section fxLayout="row" class="app-section app-comp-header">
+    <div fxFlex>
+        <h5 class="app-title">Dashboards</h5>
+    </div>
+    <div fxLayout="row">
+        <div class="ml-3">
+            <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search Dashboard">
+        </div>
+        <div class="ml-3">
+            <button mat-mini-fab color="primary" matTooltip="Create a new dashboard" (click)="addDashboard()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="app-section app-comp-body">
+    <img src="https://www.sapanalytics.cloud/wp-content/uploads/2017/03/2017-05-03_13-31-51-1024x602.png" width="100%" alt="">
+</section>

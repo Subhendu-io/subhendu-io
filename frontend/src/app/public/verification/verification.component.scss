@@ -1,0 +1,20 @@
+.app-main{
+    height: 110vh;
+    .app-verification-bg{
+        background-image: url('/assets/images/bbg-2.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+    }
+    .app-form-wrapper{
+        .app-form{
+            padding: 40px 30px;
+            .app-form-title{
+                font-weight: 100;
+            }
+            .app-divider{
+                margin: 15px auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.app-toolbox{
+    .app-toolbox-menu{
+        .app-toolbox-menu-list{
+            h3{
+                color: white;
+            }
+            mat-list-item{
+                cursor: pointer;
+                font-size: .95em;
+                color: white;
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+                &.active{
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}
