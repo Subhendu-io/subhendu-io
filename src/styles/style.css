@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Rubik", sans-serif;
+  background: rgba(2, 0, 36, 1);
+}
+body {
+  color: aliceblue;
+  background: linear-gradient(
+    167deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(62, 9, 121, 1) 53%,
+    rgba(255, 0, 140, 1) 100%
+  );
+}
+.font-fira {
+  font-family: "Fira Code", monospace;
+  font-size: large;
+}

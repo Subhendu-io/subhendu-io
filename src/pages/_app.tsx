@@ -2,15 +2,20 @@ import type { AppProps } from "next/app";
 
 import Layout from "@/layouts";
 
-import "bootstrap/dist/css/bootstrap.css";
-import "@/css/aos.css";
-import "@/css/style.css";
+import "@/styles/style.css";
 
-function App({ Component, ...props }: AppProps) {
+function App({ Component, ...props }: any) {
+  const excludeLayout = Component.excludeLayout || false;
   return (
-    <Layout>
-      <Component {...props} />
-    </Layout>
+    <>
+      {excludeLayout ? (
+        <Component {...props} />
+      ) : (
+        <Layout>
+          <Component {...props} />
+        </Layout>
+      )}
+    </>
   );
 }
 export default App;

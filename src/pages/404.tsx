@@ -1,7 +1,7 @@
-import React from "react";
+import { FC } from "react";
 
-const Custom404 = () => {
-  return <h4>404 - Page Not Found</h4>;
+const Custom404: FC = () => {
+  return <div className="page-content">Custom404</div>;
 };
 
 export default Custom404;

@@ -1,14 +1,19 @@
 import React from "react";
 import type { AppProps } from "next/app";
 
-import Home from "./home";
+import Layout from "@/layouts";
+import Header from "@/layouts/header";
+import Footer from "@/layouts/footer";
+import Hero from "@/components/home/Hero";
 
-const App = ({ Component, ...props }: AppProps) => {
+const Home = ({ Component, ...props }: AppProps) => {
   return (
-    <main id="main-container">
-      <Home />
-    </main>
+    <Layout>
+      <Header />
+      <Hero />
+      <Footer />
+    </Layout>
   );
 };
 
-export default App;
+export default Home;

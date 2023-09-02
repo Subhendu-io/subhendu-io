@@ -1,11 +1,7 @@
-import { FunctionComponent } from "react";
+import { FC } from "react";
 
-type FooterProps = {
-  children?: any;
-};
-
-const Footer: FunctionComponent<FooterProps> = ({ children }) => {
-  return <footer>{children}</footer>;
+const Footer: FC = () => {
+  return <footer></footer>;
 };
 
 export default Footer;
