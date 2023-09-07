@@ -1,5 +1,3 @@
-import type { AppProps } from "next/app";
-
 import Layout from "@/layouts";
 
 import "@/styles/style.css";
